@@ -29,9 +29,12 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start - 2>>>>>>>>>>>>>>>>>>>>");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/testApp.ipa");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start - 3>>>>>>>>>>>>>>>>>>>>");
         iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
         driver = new IOSDriver<>(new URL(mHost), iosCapabilities);
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start - 4>>>>>>>>>>>>>>>>>>>>");
 
 
 
