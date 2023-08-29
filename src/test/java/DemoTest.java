@@ -25,24 +25,24 @@ public class DemoTest {
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start>>>>>>>>>>>>>>>>>>>>");
 
 
-//        DesiredCapabilities iosCapabilities = new DesiredCapabilities();
-//        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-//        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
-//        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
-//        iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/testApp.ipa");
-//        iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
-//        driver = new IOSDriver<>(new URL(mHost), iosCapabilities);
+        DesiredCapabilities iosCapabilities = new DesiredCapabilities();
+        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
+        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
+        iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/testApp.ipa");
+        iosCapabilities.setCapability("automationName", "XCUITest"); // Automation name for iOS
+        driver = new IOSDriver<>(new URL(mHost), iosCapabilities);
 
 
 
         // Create an Android driver using Android desired capabilities
-       DesiredCapabilities androidCapabilities = new DesiredCapabilities();
-        androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 6");
-        androidCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/app-debug.apk");
-        androidCapabilities.setCapability("automationName", "UiAutomator2"); // Automation name for Android
-        driver = new AndroidDriver<>(new URL(mHost), androidCapabilities);
+//       DesiredCapabilities androidCapabilities = new DesiredCapabilities();
+//        androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+//        androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
+//        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 6");
+//        androidCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/app-debug.apk");
+//        androidCapabilities.setCapability("automationName", "UiAutomator2"); // Automation name for Android
+//        driver = new AndroidDriver<>(new URL(mHost), androidCapabilities);
 
     }
 
