@@ -29,7 +29,7 @@ public class DemoTest {
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set .app file>>>>>>>>>>>>>>>>>>>>");
-        iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/SampleiOS.app");
+        iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/Runner.app");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities >>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
