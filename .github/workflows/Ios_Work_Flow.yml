@@ -42,5 +42,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: unit_test_report
-        path: /Users/runner/work/-appiumExample/  
+        path: /Users/runner/work/  
         
