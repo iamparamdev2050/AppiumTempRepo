@@ -39,7 +39,7 @@ public class DemoTest {
        DesiredCapabilities androidCapabilities = new DesiredCapabilities();
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 4");
+        androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 6");
         androidCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/app-debug.apk");
         androidCapabilities.setCapability("automationName", "UiAutomator2"); // Automation name for Android
         driver = new AndroidDriver<>(new URL(mHost), androidCapabilities);
