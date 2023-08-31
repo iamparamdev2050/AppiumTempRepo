@@ -15,7 +15,8 @@ import io.appium.java_client.ios.IOSDriver;
 public class DemoTest {
 
     WebDriver driver;
-    String mHost="http://localhost:4723/wd/hub";
+    // String mHost="http://localhost:4723/wd/hub";
+    String mHost="http://127.0.0.1:4723";
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
