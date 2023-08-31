@@ -14,7 +14,7 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class DemoTest {
 
-    WebDriver driver;
+    AppiumDriver driver;
     // String mHost="http://localhost:4723/wd/hub";
     String mHost="http://127.0.0.1:4723";
 
@@ -38,7 +38,7 @@ try{
         iosCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 3600);
 
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities start>>>>>>>>>>>>>>>>>>>>");
-        driver= new IOSDriver(new URL(mHost), iosCapabilities);
+        driver= new AppiumDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
      } catch (Exception error){
