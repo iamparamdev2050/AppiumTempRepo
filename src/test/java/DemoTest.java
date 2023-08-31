@@ -1,4 +1,3 @@
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.WebDriver;
@@ -16,8 +15,7 @@ import io.appium.java_client.ios.IOSDriver;
 public class DemoTest {
 
     WebDriver driver;
-    String mHost="http://localhost:4723/";
-    // String mHost="http://0.0.0.0:4723/";
+    String mHost="http://localhost:4723/wd/hub";
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
@@ -26,12 +24,19 @@ public class DemoTest {
 
         DesiredCapabilities iosCapabilities = new DesiredCapabilities();
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.2");
-        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 14");
+        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.2");
+        iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set .app file>>>>>>>>>>>>>>>>>>>>");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/Runner.app");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities >>>>>>>>>>>>>>>>>>>>");
+        iosCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
+
+        iosCapabilities.setCapability("wdaStartupRetries", "4");
+        iosCapabilities.setCapability("iosInstallPause","8000" );
+        iosCapabilities.setCapability("wdaStartupRetryInterval", "20000");
+        iosCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 3600);
+
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities start>>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
 
