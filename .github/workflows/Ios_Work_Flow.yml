@@ -17,23 +17,12 @@ jobs:
         distribution: 'temurin'
         java-version: 11
         cache: 'gradle'
-    - uses: nanasess/setup-chromedriver@v2
-      with:
-    # Optional: do not specify to match Chrome's version
-        chromedriver-version: '110.0.5481.77'
-    - run: |
-       export DISPLAY=:99
-       chromedriver --url-base=/wd/hub &
-       sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional    
-    - name: Install the Emulator
+    - name: Install the Appium driver
       run: |
         chmod +x ./scripts/RunAppiumServer.sh
         ./scripts/RunAppiumServer.sh
-      shell: bash   
-    - name: List iOS Devices & Platforms
-      run: |
-          xcrun simctl list
-    - name: Install iOS 16.2 Runtime
+      shell: bash
+    - name: Install iOS 15.2 Runtime
       run: |
           gem install xcode-install
           xcversion simulators --install='iOS 15.2'
