@@ -7,4 +7,4 @@ appium driver run xcuitest build-wda
 appium driver install --source=npm appium-flutter-driver
 
 appium -v
-appium --log appium.log &>/dev/null &
+appium &
