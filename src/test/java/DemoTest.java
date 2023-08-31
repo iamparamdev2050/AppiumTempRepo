@@ -29,7 +29,7 @@ try{
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhoneX");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set .app file>>>>>>>>>>>>>>>>>>>>");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/Runner.app");
-        iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCuiTest");
+        iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "xcuiTest");
         iosCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
 
         iosCapabilities.setCapability("wdaStartupRetries", "4");
