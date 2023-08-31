@@ -20,7 +20,7 @@ public class DemoTest {
     @BeforeClass
     public void setUp() throws MalformedURLException {
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start>>>>>>>>>>>>>>>>>>>>");
-
+try{
 
         DesiredCapabilities iosCapabilities = new DesiredCapabilities();
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
@@ -39,6 +39,11 @@ public class DemoTest {
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities start>>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
+
+     } catch (Exception error){
+            
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Exception >>>>>>>>>>>>>>>>>>>>" + error.getMessage());
+        }
 
     }
 
