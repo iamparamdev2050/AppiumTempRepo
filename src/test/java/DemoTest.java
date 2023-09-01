@@ -44,7 +44,7 @@ public class DemoTest {
 
  DesiredCapabilities androidCapabilities = new DesiredCapabilities();
  capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 4"); // Replace with your device's name
+capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 6"); // Replace with your device's name
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
         androidCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/GusiAndroid.apk");
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Added .apk file>>>>>>>>>>>>>>>>>>>>");
