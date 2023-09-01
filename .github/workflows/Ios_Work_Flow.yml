@@ -34,14 +34,7 @@ jobs:
         xcrun simctl create TestiPhoneX com.apple.CoreSimulator.SimDeviceType.iPhone-X com.apple.CoreSimulator.SimRuntime.iOS-14-2 > deviceid.txt 
         DEVICEUUID=`cat deviceid.txt`          
         echo $DEVICEUUID        
-        xcrun simctl boot $DEVICEUUID 
-
-    - name: Install the Appium and Driver
-      run: |
-        chmod +x ./scripts/RunAppiumServer.sh
-        ./scripts/RunAppiumServer.sh
-      shell: bash
-
+        xcrun simctl boot $DEVICEUUID
     - name: Run Test
       run: ./gradlew test --info
     - name: Upload test report
