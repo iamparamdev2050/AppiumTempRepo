@@ -15,40 +15,23 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class DemoTest {
 
+   
     WebDriver driver;
     String mHost="http://localhost:4723";
-    // String mHost="http://127.0.0.1:4723";
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start>>>>>>>>>>>>>>>>>>>>");
+
 
         DesiredCapabilities iosCapabilities = new DesiredCapabilities();
         iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-          iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "16.2");
+        iosCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.2");
         iosCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "TestiPhoneX");
         iosCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/Runner.app");
         iosCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCuiTest");
-        iosCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
-
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities start>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<<<Test Start and setting iosCapabilities >>>>>>>>>>>>>>>>>>>>");
         driver= new IOSDriver(new URL(mHost), iosCapabilities);
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set iosCapabilities Done >>>>>>>>>>>>>>>>>>>>");
-
-
-        // DesiredCapabilities androidCapabilities = new DesiredCapabilities();
-        // androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        // androidCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 6"); // Replace with your device's name
-        // androidCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-        // androidCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"/apps/GusiAndroid.apk");
-        // System.out.println("<<<<<<<<<<<<<<<<<<<<<<Added .apk file>>>>>>>>>>>>>>>>>>>>");
-        // androidCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-        // androidCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
-
-        // System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set androidCapabilities start>>>>>>>>>>>>>>>>>>>>");
-        // driver= new AndroidDriver(new URL(mHost), androidCapabilities);
-        // System.out.println("<<<<<<<<<<<<<<<<<<<<<<Set androidCapabilities Done >>>>>>>>>>>>>>>>>>>>");
-
 
     }
 
