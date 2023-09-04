@@ -23,10 +23,10 @@ jobs:
     - name: Install iOS 11.4 Runtime
       run: |
         gem install xcode-install
-        xcversion simulators --install='iOS 14.2'
-    - name: Create and Run iOS Emulator - iPhoneX on iOS 14.2, Update default appium config for iOS
+        xcversion simulators --install='iOS 16.2'
+    - name: Create and Run iOS Emulator - iPhoneX on iOS 16.2, Update default appium config for iOS
       run: |
-        xcrun simctl create TestiPhoneX com.apple.CoreSimulator.SimDeviceType.iPhone-X com.apple.CoreSimulator.SimRuntime.iOS-14-2 > deviceid.txt 
+        xcrun simctl create TestiPhoneX com.apple.CoreSimulator.SimDeviceType.iPhone-X com.apple.CoreSimulator.SimRuntime.iOS-16-2 > deviceid.txt 
         DEVICEUUID=`cat deviceid.txt`          
         echo $DEVICEUUID        
         xcrun simctl boot $DEVICEUUID 
