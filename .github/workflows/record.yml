@@ -10,6 +10,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install ffmpeg
+        run: |
+          echo "Installing ffmpeg..."
+          brew install ffmpeg
+
+      - name: Get ffmpeg version
+        id: ffmpeg-version
+        run: |
+          ffmpeg_version=$(ffmpeg -version | grep "ffmpeg version" | awk '{print $3}')
+          echo "ffmpeg version: $ffmpeg_version"
+          echo "::set-output name=ffmpeg_version::$ffmpeg_version"
+
       - name: Start Video Recording
         run: |
           # Add your command to start video recording here
